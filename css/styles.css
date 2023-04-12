@@ -11050,3 +11050,25 @@ html {
 .copyright {
   background-color: #1a252f;
 }
+
+.slide{
+  margin-top: 10px;
+  
+}
+.slide img{
+height: 35vw;
+ 
+}
+
+h5 {
+  color:black;
+}
+ p{
+  color:#000
+}
+
+#carouselExampleCaptions{
+  color:black;
+ 
+  
+}
