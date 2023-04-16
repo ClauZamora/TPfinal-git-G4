@@ -15,6 +15,11 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
     type="text/css" />
+  <!-- Validacion formulario -->
+  <script type="text/javascript" src="js/Validate.js"></script>
+  <!-- Google Api Location -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <script type="module" src="js/Api-code.js"></script>
   <!-- Core theme CSS (includes Bootstrap)-->
   <link href="css/styles.css" rel="stylesheet" />
 </head>
@@ -36,12 +41,17 @@
           </li>
           <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">Sobre
               Nosotros</a></li>
+            <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#participantes">Participantes</a>
+          </li>
           <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Contacto</a>
+          </li>
+           <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#location">Ubicación</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
+
   <!-- Masthead-->
   <header class="masthead bg-primary text-white text-center">
     <div class="container d-flex align-items-center flex-column">
@@ -59,7 +69,9 @@
       <p class="masthead-subheading font-weight-light mb-0">Muebles Estándar - Diseños Personalizados - Calidad</p>
     </div>
   </header>
-  <!-- Portfolio Section-->
+
+  
+  <!-- Galeria con carrousel-->
   <section class="page-section portfolio" id="portfolio">
     <div class="container">
       <!-- Portfolio Section Heading-->
@@ -70,13 +82,9 @@
         <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
         <div class="divider-custom-line"></div>
       </div>
-      <!--carousel de galeria-->
-
-
-      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-
+      <!--carousel-->
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
-
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
             aria-current="true" aria-label="Slide 1"></button>
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
@@ -88,9 +96,7 @@
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
             aria-label="Slide 0"></button>
         </div>
-
-        <div class="carousel-inner">
-
+       <div class="carousel-inner">
           <div class="carousel-item active">
             <img src="imagenes/Placard.jpg" class="d-block w-100" alt="placard">
             <div class="carousel-caption d-none d-md-block">
@@ -126,10 +132,8 @@
               <p>Cama cucheta linea confort una 1 plaza 1/2</p>
             </div>
           </div>
-
-
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+       </div>
+         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
           data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden ">Prev</span>
@@ -141,14 +145,8 @@
         </button>
       </div>
 
-
-
-
-
-
-
   </section>
-  <!-- About Section-->
+  <!-- Seccion sobre nosotros-->
   <section class="page-section bg-primary text-white mb-0" id="about">
     <div class="container">
       <!-- About Section Heading-->
@@ -180,23 +178,60 @@
             los hogares, sino también contribuir positivamente a nuestra comunidad y al mundo en general.</p>
         </div>
       </div>
-      <!-- About Section Button-->
-      <div class="text-center mt-4">
-        <a class="btn btn-xl btn-outline-light" href="https://www.google.com/maps/place/San+Rafael,+Mendoza/@-34.6273241,-68.4076121,12z/data=!3m1!4b1!4m6!3m5!1s0x967907fdb13d06a7:0xe0fb2796d473309d!8m2!3d-34.6128922!4d-68.3390622!16zL20vMGQ4cXp5" target="_blank">
-          <i class="bi bi-geo-alt"></i>
-          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
-  <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
-  <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-</svg>
-         Aca Estamos
-        </a>
+  </section>
+
+  <section>
+    <!-- Participantes del trabajo-->
+  <section class="page-section" id="participantes">
+    <div class="container">
+      <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Participantes</h2>
+      <!-- Icon Divider-->
+      <div class="divider-custom">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+        <div class="divider-custom-line"></div>
       </div>
     </div>
-  </section>
-  <!-- Contact Section-->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="team-member">
+            <h4>Claudio Zamora</h4><br>
+            <h3>Tengo 38 años con una curiosidad por la programación y un gran deseo de aprender y crecer en este campo. Me encanta el desafío y la resolución de problemas, y estoy emocionado de desarrollar mis habilidades y conocimientos en programación.</h3>
+          </div>
+        </div> <br>
+        <div class="col-lg-3">
+          <div class="team-member">
+            <h4>Numero 2</h4><br>
+            <h3></h3>
+          </div>
+        </div> <br>  
+        <div class="col-lg-3">
+          <div class="team-member">
+            <h4>Numero 3</h4><br>
+            <h3></h3>
+          </div>
+        </div> <br>
+        <div class="col-lg-3">
+          <div class="team-member">
+            <h4>Numero 4</h4><br>
+            <h3></h3>
+          </div>
+        </div> <br>
+        <div class="col-lg-3">
+          <div class="team-member">
+            <h4>Numero 5</h4><br>
+            <h3></h3>
+          </div>
+        </div>
+      </div>
+  </section>
+  
+  <!-- Contacto Section-->
+ <section>
   <section class="page-section" id="contact">
     <div class="container">
-      <!-- Contact Section Heading-->
+      <!-- Contacto Section Heading-->
       <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Contacto</h2>
       <!-- Icon Divider-->
       <div class="divider-custom">
@@ -204,26 +239,17 @@
         <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
         <div class="divider-custom-line"></div>
       </div>
-      <!-- Contact Section Form-->
+      <!-- Contacto Section Form-->
       <div class="row justify-content-center">
         <div class="col-lg-8 col-xl-7">
-          <!-- * * * * * * * * * * * * * * *-->
-          <!-- * * SB Forms Contact Form * *-->
-          <!-- * * * * * * * * * * * * * * *-->
-          <!-- This form is pre-integrated with SB Forms.-->
-          <!-- To make this form functional, sign up at-->
-          <!-- https://startbootstrap.com/solution/contact-forms-->
-          <!-- to get an API token!-->
-
-          <form id="contactForm" action="https://formspree.io/f/xpzeoraa" method="post">
             <!-- Name input-->
+        <form>
             <div class="form-floating mb-3">
               <input class="form-control" name="name" id="name" type="text" placeholder="Enter your name..." pattern="[A-Za-z]+" data-sb-validations="required"/>
                   <label for="name">Nombre y Apellido</label>
                  <div class="invalid-feedback" data-sb-feedback="name:required">Campo obligatorio</div>
                 <div class="invalid-feedback" data-sb-feedback="name:pattern">Solo se permiten letras</div>
             </div>
-
             <!-- Email address input-->
             <div class="form-floating mb-3">
               <input class="form-control" id="email" type="email" placeholder="name@example.com" name="email"
@@ -247,31 +273,49 @@
               <div class="invalid-feedback" data-sb-feedback="message:required">Campo obligatorio</div>
             </div>
             <!-- Submit Button-->
-            <button class="btn btn-primary btn-xl" type="submit">Enviar</button>
+            <button class="btn btn-primary btn-xl" type="submit" onclick="cargarDatos()">Enviar</button>
             <div class="d-none" id="submitSuccessMessage">
               <div class="text-center mb-3">
                 <div class="fw-bolder">El mensaje se envio exitosamente</div>
                 Gracias por enviar tu formulario!
               </div>
             </div>
-        </div>
+        </div><br>
+        <table id="tablaFormulario" border="1">
+      <tr>
+        <td>Nombre y Apellido</td>
+        <td>Email</td>
+        <td>Celular</td>
+        <td>Mensaje</td>
+      </tr>
+    </table>
+      </div>
       </form>
   </section>
-  <!-- Footer-->
+         <!--API Ubicacion Google-->
+<section>
+   <section class="page-section" id="location">
+    <div class="container">
+      <!-- Contact Section Heading-->
+      <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Ubicación</h2>
+      <!-- Icon Divider-->
+     <div class="divider-custom">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+        <div class="divider-custom-line"></div>
+      </div>
+    <div class="ubicacion">
+             <div id="map"></div>
+            </div>
+    </div>
+</section>
+        
+<!-- Footer-->
   <footer class="footer text-center">
     <div class="container">
       <div class="row">
-        <!-- Footer Location-->
-        <div class="col-lg-4 mb-5 mb-lg-0">
-          <h4 class="text-uppercase mb-4">Encontranos</h4>
-          <p class="lead mb-0">
-            Avenida General San Martin 1250
-            <br />
-            San Rafel, Mendoza
-          </p>
-        </div>
         <!-- Footer Social Icons-->
-        <div class="col-lg-4 mb-5 mb-lg-0">
+        <div class="col-lg-6 mb-5 mb-lg-0">
           <h4 class="text-uppercase mb-4">Seguinos en nuestras redes</h4>
           <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-facebook-f"></i></a>
           <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-twitter"></i></a>
@@ -279,7 +323,7 @@
           <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-dribbble"></i></a>
         </div>
         <!-- Footer About Text-->
-        <div class="col-lg-4">
+        <div class="col-lg-6">
           <h4 class="text-uppercase mb-4">Data Fiscal</h4>
           <p class="lead mb-0">
             <a href="http://www.afip.gob.ar" target="_blank">
@@ -294,232 +338,20 @@
   <div class="copyright py-4 text-center text-white">
     <div class="container"><small>Copyright &copy;  Website Grupo 4 2023</small></div>
   </div>
-  <!-- Portfolio Modals-->
-  <!-- Portfolio Modal 1-->
-  <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" aria-labelledby="portfolioModal1"
-    aria-hidden="true">
-    <div class="modal-dialog modal-xl">
-      <div class="modal-content">
-        <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
-            aria-label="Close"></button></div>
-        <div class="modal-body text-center pb-5">
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-lg-8">
-                <!-- Portfolio Modal - Title-->
-                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Log Cabin</h2>
-                <!-- Icon Divider-->
-                <div class="divider-custom">
-                  <div class="divider-custom-line"></div>
-                  <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                  <div class="divider-custom-line"></div>
-                </div>
-                <!-- Portfolio Modal - Image-->
-                <img class="img-fluid rounded mb-5" src="assets/img/portfolio/cabin.png" alt="..." />
-                <!-- Portfolio Modal - Text-->
-                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam
-                  nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae?
-                  Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                <button class="btn btn-primary" data-bs-dismiss="modal">
-                  <i class="fas fa-xmark fa-fw"></i>
-                  Close Window
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Portfolio Modal 2-->
-  <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" aria-labelledby="portfolioModal2"
-    aria-hidden="true">
-    <div class="modal-dialog modal-xl">
-      <div class="modal-content">
-        <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
-            aria-label="Close"></button></div>
-        <div class="modal-body text-center pb-5">
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-lg-8">
-                <!-- Portfolio Modal - Title-->
-                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Tasty Cake</h2>
-                <!-- Icon Divider-->
-                <div class="divider-custom">
-                  <div class="divider-custom-line"></div>
-                  <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                  <div class="divider-custom-line"></div>
-                </div>
-                <!-- Portfolio Modal - Image-->
-                <img class="img-fluid rounded mb-5" src="assets/img/portfolio/cake.png" alt="..." />
-                <!-- Portfolio Modal - Text-->
-                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam
-                  nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae?
-                  Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                <button class="btn btn-primary" data-bs-dismiss="modal">
-                  <i class="fas fa-xmark fa-fw"></i>
-                  Close Window
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Portfolio Modal 3-->
-  <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" aria-labelledby="portfolioModal3"
-    aria-hidden="true">
-    <div class="modal-dialog modal-xl">
-      <div class="modal-content">
-        <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
-            aria-label="Close"></button></div>
-        <div class="modal-body text-center pb-5">
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-lg-8">
-                <!-- Portfolio Modal - Title-->
-                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Circus Tent</h2>
-                <!-- Icon Divider-->
-                <div class="divider-custom">
-                  <div class="divider-custom-line"></div>
-                  <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                  <div class="divider-custom-line"></div>
-                </div>
-                <!-- Portfolio Modal - Image-->
-                <img class="img-fluid rounded mb-5" src="assets/img/portfolio/circus.png" alt="..." />
-                <!-- Portfolio Modal - Text-->
-                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam
-                  nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae?
-                  Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                <button class="btn btn-primary" data-bs-dismiss="modal">
-                  <i class="fas fa-xmark fa-fw"></i>
-                  Close Window
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Portfolio Modal 4-->
-  <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" aria-labelledby="portfolioModal4"
-    aria-hidden="true">
-    <div class="modal-dialog modal-xl">
-      <div class="modal-content">
-        <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
-            aria-label="Close"></button></div>
-        <div class="modal-body text-center pb-5">
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-lg-8">
-                <!-- Portfolio Modal - Title-->
-                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Controller</h2>
-                <!-- Icon Divider-->
-                <div class="divider-custom">
-                  <div class="divider-custom-line"></div>
-                  <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                  <div class="divider-custom-line"></div>
-                </div>
-                <!-- Portfolio Modal - Image-->
-                <img class="img-fluid rounded mb-5" src="assets/img/portfolio/game.png" alt="..." />
-                <!-- Portfolio Modal - Text-->
-                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam
-                  nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae?
-                  Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                <button class="btn btn-primary" data-bs-dismiss="modal">
-                  <i class="fas fa-xmark fa-fw"></i>
-                  Close Window
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Portfolio Modal 5-->
-  <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" aria-labelledby="portfolioModal5"
-    aria-hidden="true">
-    <div class="modal-dialog modal-xl">
-      <div class="modal-content">
-        <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
-            aria-label="Close"></button></div>
-        <div class="modal-body text-center pb-5">
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-lg-8">
-                <!-- Portfolio Modal - Title-->
-                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Locked Safe</h2>
-                <!-- Icon Divider-->
-                <div class="divider-custom">
-                  <div class="divider-custom-line"></div>
-                  <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                  <div class="divider-custom-line"></div>
-                </div>
-                <!-- Portfolio Modal - Image-->
-                <img class="img-fluid rounded mb-5" src="assets/img/portfolio/safe.png" alt="..." />
-                <!-- Portfolio Modal - Text-->
-                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam
-                  nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae?
-                  Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                <button class="btn btn-primary" data-bs-dismiss="modal">
-                  <i class="fas fa-xmark fa-fw"></i>
-                  Close Window
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Portfolio Modal 6-->
-  <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" aria-labelledby="portfolioModal6"
-    aria-hidden="true">
-    <div class="modal-dialog modal-xl">
-      <div class="modal-content">
-        <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
-            aria-label="Close"></button></div>
-        <div class="modal-body text-center pb-5">
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-lg-8">
-                <!-- Portfolio Modal - Title-->
-                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Submarine</h2>
-                <!-- Icon Divider-->
-                <div class="divider-custom">
-                  <div class="divider-custom-line"></div>
-                  <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                  <div class="divider-custom-line"></div>
-                </div>
-                <!-- Portfolio Modal - Image-->
-                <img class="img-fluid rounded mb-5" src="assets/img/portfolio/submarine.png" alt="..." />
-                <!-- Portfolio Modal - Text-->
-                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam
-                  nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae?
-                  Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                <button class="btn btn-primary" data-bs-dismiss="modal">
-                  <i class="fas fa-xmark fa-fw"></i>
-                  Close Window
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
   <!-- Bootstrap core JS-->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
   <!-- Core theme JS-->
+  <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDU1w8R3YUx28OLw32G-wG6aic7KjYu2zw&callback=initMap&v=weekly"
+      defer
+    ></script>
   <script src="js/scripts.js"></script>
   <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
   <!-- * *                               SB Forms JS                               * *-->
   <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
   <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
   <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+  
 </body>
 
 </html>
