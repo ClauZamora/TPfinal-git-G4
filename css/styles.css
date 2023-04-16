@@ -146,6 +146,7 @@ h2, .h2 {
 
 h3, .h3 {
   font-size: calc(1.3rem + 0.6vw);
+  text-align: justify;
 }
 @media (min-width: 1200px) {
   h3, .h3 {
@@ -11069,6 +11070,15 @@ h5 {
 
 #carouselExampleCaptions{
   color:black;
- 
-  
+}
+
+.ubicacion{
+  margin-bottom: 48px;
+  text-align: center;
+  padding: 10px;
+}
+#map{
+  width: 1200px;
+  height: 450px;
+  border:0;
 }
